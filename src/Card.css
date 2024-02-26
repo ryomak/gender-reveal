@@ -1,0 +1,24 @@
+
+.scratch-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 100px); /* 3列のグリッドレイアウト */
+    grid-template-rows: repeat(3, 100px); /* 3行のグリッドレイアウト */
+    justify-items: center;
+    align-items: center;
+    gap: 15px; /* セル間の間隔 */
+    padding: 16px;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    border: 8px dashed #999999;
+}
+
+.header {
+    width: 100%;
+}

@@ -1,0 +1,19 @@
+/* ScratchCell.css */
+.scratch-cell {
+    width: 100px; /* セルの幅 */
+    height: 100px; /* セルの高さ */
+    border-radius: 50px;
+    background-color: #cccccc; /* 未スクラッチ時の背景色 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    font-size: 2rem; /* アイコンのサイズ */
+    border: 2px solid ; /* セルの枠線 */
+    cursor: pointer; /* ホバー時にカーソルをポインターに */
+    overflow: hidden;
+}
+
+.revealed {
+    background-color: #ffccff; /* スクラッチされた後の背景色 */
+}
