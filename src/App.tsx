@@ -3,6 +3,8 @@ import {Card} from "./Card.tsx";
 import {useEffect, useRef, useState} from "react";
 import { useReward } from "react-rewards";
 import backgroundImage from './assets/background.webp';
+import bgm from './assets/bgm.mp3';
+import useSound from 'use-sound';
 
 const useInterval = (callback: () => void) => {
     const callbackRef = useRef(() => {});
@@ -56,14 +58,23 @@ function App() {
         }, 3000);
     }
 
+    const [played, setPlayed] = useState(false);
+  const [play] = useSound(bgm, { volume: 0.5 });
+  const playBgm = () => {
+    if (!played) {
+      play();
+      setPlayed(true);
+    }
+  }
+
+
   return (
     <div style={{overflow:"hidden",width:"100vw",height:"100vh"}}>
-        {!open&&<div className='cardContainer'><Card openResult={openResult}/></div>}
+        {!open&&<div className='cardContainer' onClick={playBgm}><Card openResult={openResult}/></div>}
         <div id='rewardLeft' style={{position:'absolute',bottom:0,left:0}}></div>
         <div id='rewardRight' style={{position:'absolute',bottom:0,right:0}}></div>
         <OpenResultModal isOpen={open}/>
         <img src={backgroundImage} style={{position:'absolute',top:'0',left:'0',zIndex:-1,height:'100%',width:'100%',objectFit:'cover'}}/>
-        <audio controls autoPlay src="~"></audio>
     </div>
   )
 }
