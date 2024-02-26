@@ -34,7 +34,7 @@ const Img: React.FC<{img:string,name:string}> = ({ img ,name }) => {
 	return (
 		<div style={{width:'100%',height:'100%',position:'relative'}}>
 			<div style={{zIndex:1,color:'white'}}>{name}</div>
-			<img src={img} style={{position:"absolute",width:'100%',height:'100%',left:0,top:0}}/>
+			<img src={img} style={{position:"absolute",width:'100%',height:'100%',left:0,top:0}} className={'scratch-'}/>
 		</div>
 	)
 }

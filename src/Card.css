@@ -22,3 +22,16 @@
 .header {
     width: 100%;
 }
+
+@media screen and (max-width: 600px) {
+
+    .scratch-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 80px); /* 3列のグリッドレイアウト */
+        grid-template-rows: repeat(3, 80px); /* 3行のグリッドレイアウト */
+        justify-items: center;
+        align-items: center;
+        gap: 8px; /* セル間の間隔 */
+        padding: 16px;
+    }
+}

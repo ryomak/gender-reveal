@@ -72,7 +72,7 @@ const OpenResultModal: React.FC<{isOpen:boolean}> = ({isOpen}) => {
     return (
         <div className={`result ${isOpen?'resultOpen':'resultHidden'}`}>
             <div className={'resultContainer'} >
-            <h4 className={'resultTitle'}>Girlが生まれます❤️</h4>
+            <h4 className={'resultTitle'}>Girlが生まれます❤</h4>
             <div className={'resultContent'}>
                 <p style={{fontSize:28,margin:12}}>性別はなんと女の子！！</p>
                 <p>

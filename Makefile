@@ -1,3 +1,3 @@
-build:
+deploy:
 	yarn build
-	mv dist docs
+	yarn deploy

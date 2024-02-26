@@ -23,7 +23,7 @@ export const Card: React.FC<{
 	}
 
 	return (
-		<div style={{padding: 12,background:'white',borderRadius: 12}}>
+		<div style={{padding: 12,background:'white',borderRadius: 12,maxWidth:'90%',margin:'0 auto'}}>
 		<div className="card">
 				<img className='header' src={headerLogo}/>
 				<div className="scratch-grid">

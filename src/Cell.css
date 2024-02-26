@@ -17,3 +17,10 @@
 .revealed {
     background-color: #ffccff; /* スクラッチされた後の背景色 */
 }
+
+@media screen and (max-width: 600px) {
+    .scratch-cell {
+        width: 80px;
+        height:80px;
+    }
+}
